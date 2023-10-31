@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Open Links</title>
+    <script>
+        function openLinks() {
+            var textarea = document.getElementById("linksTextarea");
+            var links = textarea.value.split("\n");
+
+            for (var i = 0; i < links.length; i++) {
+                if (links[i].trim() !== "") {
+                    window.open(links[i], "_blank");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <textarea id="linksTextarea" rows="10" cols="50"></textarea><br>
+    <button onclick="openLinks()">Open</button>
+</body>
+</html>
